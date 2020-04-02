@@ -1,0 +1,17 @@
+
+.greetings{
+    display:flex;
+    flex-direction:column;
+    width:100px;
+}
+.greet-button{
+    border-collapse: collapse;
+}
+.greetings-input{
+ border-collapse: collapse;   
+}
+.fav-dessert{
+    display: flex;
+    flex-direction:column;
+    width:300px;
+}
