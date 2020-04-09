@@ -1,43 +1,151 @@
-.image-size{
-    /*width:200px;*/
-    height:150px;
-    
+.lightBackground {
+    color: black;
+    background-color: #fff;
 }
-.root-div{
+
+.darkBackground {
+    color: white;
+    background-color: #2b3945;
+}
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    box-shadow: 5px 5px 5px 5px grey
+}
+
+.LightThemeButton {
+    border: none;
+    font-size: 20px;
+    color: black;
+}
+
+.DarkThemeButton {
+    border: none;
+    font-size: 20px;
+    color: white;
+}
+
+.Header-content {
+    font-size: 20px;
+}
+
+.SearchBar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.SearchCountryDark {
+    width:30%;
+    font-size: 16px;
+    color: white;
+    background-color: #2b3945;
+}
+
+.SearchCountryLight {
+    width: 30%;
+    font-size: 16px;
+    color: black;
+    background-color: #fff;
+}
+
+.SelectRegionDark {
+    font-size: 12px;
+    width: 15%;
+    text-align: center;
+    color: white;
+    background-color: #2b3945;
+}
+
+.SelectRegionLight {
+    font-size: 12px;
+    width: 15%;
+    text-align: center;
+    color: black;
+    background-color: #fff;
+}
+
+.countries-images {
+    width: 210px;
+}
+
+.Countries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.each-country {
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    margin-bottom: 30px;
+    width: 210px;
+    text-align: center;
+}
+
+.country-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.country-details-img {
+    width: 300px;
+}
+
+.border-names-container {
+    display: flex;
+    margin: 20%;
+    margin-top: -50px;
+    padding: 50px;
+}
+
+
+.LightTheme {
+    border: none;
+    font-size: 20px;
+    color: black;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.DarkTheme {
+    border: none;
+    font-size: 20px;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.border-button-Light {
+    border: none;
+    box-shadow: 5px 5px 5px grey;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 5px;
+    color: black;
+    background-color: #fff;
+}
+
+.border-button-Dark {
+    border: none;
+    box-shadow: 5px 5px 5px black;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 5px;
+    color: white;
+    background-color: #2b3945;
+}
+.page-loading{
     display:flex;
-    width:200px;
-    box-shadow:0 2px 4px 0 rgba(0,0,1.0,2.0), 0 4px 20px 0 rgba(0,0,5.0,0.15);
-    flex-direction:column;
-    margin-right:10px;
-    /*background:white;*/
+    justify-content:center;
+    font-size:30px;
 }
-/*.main-root-div{*/
-/*    width:30px;*/
-/*    display:flex;*/
-/*    flex-direction:row;*/
-/*}*/
-.main-countries-page-white{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-around;
-    /*padding:10px;*/
-    box-shadow:0 2px 4px 0 rgba(0,0,1.0,2.0), 0 4px 20px 0 'rgba(0,0,5.0,0.15)';
-    background-color:white;
-    
-}
-.main-countries-page-black{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-around;
-    /*padding:10px;*/
-    box-shadow:0 2px 4px 0 rgba(0,0,1.0,2.0), 0 4px 20px 0 'rgba(0,0,5.0,0.15)';
-    background-color:#303045;
-    color:white;
-    
-}
-/*.main-countries-page{*/
-/*    background-color:white;*/
-/*}*/
-/**{*/
-/*    border:1px solid red;*/
-/*}*lminuyyt6r54e3w436e5ru/
