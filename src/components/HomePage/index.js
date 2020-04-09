@@ -21,6 +21,9 @@ function App() {
         <Link to="/page-1">Page 1</Link>
         <Link to="/todolist">Todolist</Link>
         <Link to="/emoji-game">EmojiGame</Link>
+        <Link to="/CountriesDashboardApp">CountriesAssignment</Link>
+        <Link to="/counter-page">counter</Link>
+        <Link to="/todo-app">TodoApp</Link>
       </header>
     </div>
   );
