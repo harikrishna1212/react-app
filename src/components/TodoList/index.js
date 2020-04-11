@@ -12,6 +12,7 @@ class Todos extends React.Component {
         
         // const duplicateArr = this.todos;
         todosOfUser[idOfTodo].isCompleted ? todosOfUser[idOfTodo].isCompleted = false : todosOfUser[idOfTodo].isCompleted = true;
+        
        
         this.todos=todosOfUser;
 
