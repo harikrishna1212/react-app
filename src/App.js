@@ -10,7 +10,9 @@ import HomePage from "./components/HomePage";
 import CounterPage from "./components/CounterPage"
 import Page1 from "./components/Page1";
 import TodoDashboardApp from "./components/Todolist1/TodoDashboardApp.js";
-import EmojiGame from "./components/EmojiGame/EmojiGame.js"
+import EmojiGame from "./components/EmojiGame/EmojiGame.js";
+import TodoApp from "./components/NewTodo/TodoApp.js"
+import ProvideA from "./components/ProvideA/ProvideA.js"
 
 import {observable} from "mobx";
 import {observer} from "mobx-react";
@@ -33,7 +35,6 @@ class App extends React.Component {
     return this.selectedTheme;
   }
   setCurrentTheme(theme){
-    console.log("hari");
    //console.log("vamsi") 
    return "";
   }
@@ -61,6 +62,9 @@ class App extends React.Component {
       <Route exact path="/counter-page">
           <CounterPage />
         </Route>
+        <Route exact path="/mobx-todo-app">
+          <TodoApp />
+        </Route>
        <Route exact path="/country-dashboard-app/details/:CountriesDetails">
             <CountriesDetails theme={this.getCurrentTheme} onChangeTheme={this.setCurrentTheme} containerStyles={this.containerStyles}/>
           </Route>
@@ -69,6 +73,9 @@ class App extends React.Component {
           </Route>
           <Route exact path="/todo-app">
           <Todos/>
+        </Route>
+        <Route exact path="/Provide-app">
+          <ProvideA/>
         </Route>
       
       
