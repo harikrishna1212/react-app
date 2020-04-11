@@ -9,6 +9,9 @@ import Todos from "./components/TodoList/index.js"
 import HomePage from "./components/HomePage";
 import CounterPage from "./components/CounterPage"
 import Page1 from "./components/Page1";
+import TodoDashboardApp from "./components/Todolist1/TodoDashboardApp.js";
+import EmojiGame from "./components/EmojiGame/EmojiGame.js"
+
 import {observable} from "mobx";
 import {observer} from "mobx-react";
 import{configure} from "mobx";
@@ -72,9 +75,15 @@ class App extends React.Component {
         <Route exact path="/page-1">
           <Page1 />
         </Route>
+      <Route exact path="/Todolist">
+         <TodoDashboardApp />
+        </Route>  
+        <Route exact path="/emoji-game">
+          <EmojiGame />
+        </Route> 
         <Route path="/">
           <HomePage />
-        </Route>
+        </Route>        
       </Switch>
     </Router>
   );
