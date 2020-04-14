@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./Navbar.js";
-import EmojiCard from "./EmojiCard.js";
-import WinOrLose from "./WinOrLose.js"
+import Navbar from "./Navbar"
+import EmojiCard from "./EmojiCard";
+import WinOrLose from "./WinOrLose"
 class EmojiGame extends React.Component{
     state={
         score:0,

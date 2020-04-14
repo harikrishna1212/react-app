@@ -1,6 +1,6 @@
 import React, {Component}from "react";
-import counterStore from "../../stores/CounterStore/index.js";
 import {observer} from "mobx-react";
+import counterStore from "../../stores/CounterStore/index";
 @observer
 class CounterPage extends Component{
   handleIncrement=()=>{

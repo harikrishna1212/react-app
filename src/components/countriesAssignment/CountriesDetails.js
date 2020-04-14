@@ -1,9 +1,10 @@
 import React from 'react';
+import { TiArrowLeftThick } from "react-icons/ti";
 /*global fetch*/
 import { withRouter } from "react-router-dom";
-import { Header } from './Header.js';
-import { BorderNames } from './borderNames.js'
-import { TiArrowLeftThick } from "react-icons/ti";
+import { Header } from './Header';
+//import { BorderNames } from './borderNames.js'
+
 class CountriesDetails extends React.Component {
     constructor(props) {
         super(props)

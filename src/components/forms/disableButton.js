@@ -45,36 +45,37 @@
 // }
 // }
 // ReactDOM.render(<SetStateIsAsynchronous/>,document.getElementById("root"));
-class ChildCounter extends React.Component{
-    state={
-        childCounter1:0,
-        childCounter2:0
-    }
-}
-onIncrement=()=>{
-    this.props.onParentCounterIncreament();
-    this.setState({childCounter1:this.state.childCounter1+1})
-}
+// class ChildCounter extends React.Component{
+//     state={
+//         childCounter1:0,
+//         childCounter2:0
+//     }
 
+// onIncrement=()=>{
+//     this.props.onParentCounterIncreament();
+//     this.setState({childCounter1:this.state.childCounter1+1})
+// }
+// }
 
-class Parent extends React.ChildCounter{
-    constructor(props){
-        super(props);
-        this.state={
+// class Parent extends React.ChildCounter{
+//     constructor(props){
+//         super(props);
+//         this.state={
              
-        parentCounter:0
-        }
-    }
+//         parentCounter:0
+//         }
+//     }
     
-    onparentCounterIncreament=()=>{
-        this.setState({
-            parentCounter:this.state.parentCounter+1})
-        }
-    }
-render(){
-    console.log("parent counter rendre called");
-    return(
-        <ChildCounter
-        on
-        )
-}
+//     onparentCounterIncreament=()=>{
+//         this.setState({
+//             parentCounter:this.state.parentCounter+1})
+//         }
+    
+// render(){
+//     console.log("parent counter rendre called");
+//     return(
+//         <ChildCounter
+//         on
+//         )
+//     }
+// }

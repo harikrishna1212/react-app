@@ -1,6 +1,9 @@
 import React from "react"
-import ProvideC from "../ProvideC/ProvideC.js"
-class ProvideB extends React.Component{
+import ProvideC from "../ProvideC/ProvideC";
+type ProvideBProps={
+    temp:string
+}
+class ProvideB extends React.Component<ProvideBProps>{
     render(){
         const {temp}=this.props
         return <ProvideC temp={temp}/>
