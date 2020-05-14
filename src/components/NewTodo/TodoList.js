@@ -3,11 +3,11 @@ import {observer} from "mobx-react";
 import Todo from "./Todo"
 import {TodoStore} from "../../stores/TodoStore";
 
-type TodoListProps={
-    todoStore:TodoStore
-}
+// type TodoListProps={
+//     todoStore:TodoStore
+// }
 @observer
-class TodoList extends React.Component<TodoListProps>{
+class TodoList extends React.Component{
     render(){
         
        const {todoStore}=this.props;
