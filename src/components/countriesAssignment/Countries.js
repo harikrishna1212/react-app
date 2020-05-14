@@ -1,5 +1,5 @@
 import React from 'react'
-import CountryCard from './CountryCard.js'
+import CountryCard from './CountryCard'
 class Countries extends React.Component {
     renderCountries = () => {
         if (this.props.countries.length > 0)

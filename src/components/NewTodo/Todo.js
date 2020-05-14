@@ -1,7 +1,10 @@
 import React from "react";
-import {toJS} from "mobx"
-//import todoStore from "../../stores/TodoStore/index.js";
 import {observer} from "mobx-react";
+import TodoModel from "../../stores/models/TodoModel"
+// type TodoProps={
+//     onRemove:Function,
+//     eachTodoObject:TodoModel
+// }
 @observer
 class Todo extends React.Component{
 onCompletedTodo=()=>{

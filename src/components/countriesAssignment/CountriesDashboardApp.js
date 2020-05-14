@@ -4,10 +4,11 @@
 
 /*global fetch*/
 import React from 'react';
-import { Header } from './Header.js';
-import { CountriesFilterBar } from './CountriesFilterBar.js';
-import { Countries } from './Countries.js';
 import { withRouter } from 'react-router-dom';
+import { Header } from './Header';
+import { CountriesFilterBar } from './CountriesFilterBar';
+import { Countries } from './Countries';
+
 
 
 

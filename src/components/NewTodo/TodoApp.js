@@ -1,8 +1,8 @@
 import React from "react";
-import todoStore from "../../stores/TodoStore/index.js";
-import AddTodo from "./AddTodo.js";
-import TodoList from "./TodoList.js";
-import TodoFooter from "./TodoFooter.js";
+import todoStore from "../../stores/TodoStore/index";
+import AddTodo from "./AddTodo";
+import TodoList from "./TodoList";
+import TodoFooter from "./TodoFooter";
 
 class TodoApp extends React.Component{
 

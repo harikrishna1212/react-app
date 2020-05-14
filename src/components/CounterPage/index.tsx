@@ -1,15 +1,15 @@
-// import React, {Component}from "react";
-// import counterStore from "../../stores/CounterStore/index.js";
-// import {observer} from "mobx-react";
-// @observer
-// class CounterPage extends Component{
-//   handleIncrement=()=>{
-//     counterStore.onIncrement()
-//   }
-//   handleDecrement=()=>{
-//     counterStore.onDecrement()
-//   }
-//   handleOnChange=()=>{
+import React, {Component}from "react";
+import {observer} from "mobx-react";
+import counterStore from "../../stores/CounterStore/index";
+@observer
+class CounterPage extends Component{
+  handleIncrement=()=>{
+    counterStore.onIncrement()
+  }
+  handleDecrement=()=>{
+    counterStore.onDecrement()
+  }
+  handleOnChange=()=>{
     
 //   }
 //   render(){

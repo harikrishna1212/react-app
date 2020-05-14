@@ -1,9 +1,10 @@
 import {observable}from "mobx";
-import {observer} from "mobx-react";
+
 
 class TodoModel {
-    @observable title
-    @observable isCompleted 
+    id:string
+    @observable title:string
+    @observable isCompleted:boolean 
     constructor(){
         this.id=Math.random().toString();
         this.title="";

@@ -1,10 +1,9 @@
 import {observable,toJS, action, computed} from "mobx"
+import TodoModel from "../models/TodoModel";
 
-
-import TodoModel from "../models/TodoModel.js"
 
 class  TodoStore {
-  @observable todos=[];
+  @observable todos:Array<TodoModel>=[];
   @observable selectedFilter="ALL"; //ACTIVE COMPLETED
  
 @action.bound
@@ -42,12 +41,13 @@ this.todos.push(todoModel)
 //  }
  @computed
  get FilteredTodos(){
-   let remainingTodos=[]
+
+   let remainingTodos :Array<TodoModel>=[]
+
   
     if(this.selectedFilter==="Active"){
     const idToRemove=true
     remainingTodos = this.todos.filter((item) => item.isCompleted !== idToRemove);
-    console.log(remainingTodos)
     return remainingTodos;
 
    }
@@ -69,4 +69,4 @@ this.todos.push(todoModel)
 
 const todoStore = new TodoStore();
 // console.log(todoStore);
-export default todoStore;
+export {todoStore as default,TodoStore} ;

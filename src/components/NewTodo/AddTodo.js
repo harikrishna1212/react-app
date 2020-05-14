@@ -1,7 +1,7 @@
 import React from "react";
 import { observable, action } from "mobx";
 import { observer } from "mobx-react";
-import todoStore from "../../stores/TodoStore/index.js"
+import todoStore from "../../stores/TodoStore/index"
 @observer
 class AddTodo extends React.Component{
     @observable todoTitle="";
@@ -12,10 +12,10 @@ class AddTodo extends React.Component{
 
     }
     @action.bound
-    onChangeInput(event){
+    onChangeInput(){
         if(event.key==="Enter"){
         this.todoTitle=event.target.value;
-        event.target.value=""
+        event.target.value="";
         this.onAddTodo(this.todoTitle)
         }
 

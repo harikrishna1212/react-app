@@ -1,7 +1,7 @@
 import React from "react";
-import {AllEmojisSection} from "./Emojicss.js";
-import {ImageName} from "./Emojicss.js";
-import {EmojiData} from "./Emojicss.js"
+import {AllEmojisSection} from "./Emojicss";
+import {ImageName} from "./Emojicss";
+import {EmojiData} from "./Emojicss"
 
 class EmojiCard extends React.Component{
 onEmojiClick=(event)=>{
