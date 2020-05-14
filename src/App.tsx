@@ -27,7 +27,7 @@ class App extends React.Component {
   getCurrentTheme(){
     return this.selectedTheme;
   }
-  setCurrentTheme(theme){
+  setCurrentTheme(theme:any){
  
    return "";
   }

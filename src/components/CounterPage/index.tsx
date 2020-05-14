@@ -4,60 +4,61 @@ import counterStore from "../../stores/CounterStore/index";
 @observer
 class CounterPage extends Component{
   handleIncrement=()=>{
-    counterStore.onIncrement()
+    // counterStore.onIncrement()
   }
   handleDecrement=()=>{
-    counterStore.onDecrement()
+    // counterStore.onDecrement()
   }
   handleOnChange=()=>{
     
-//   }
-//   render(){
-//     return (
-//       <div>
-//       <button onClick={this.handleIncrement}>+</button>
-//       <input type="number" value={counterStore.count} />
-//       <button onClick={this.handleDecrement}>-</button>
-//       </div>
-//       );
-//   }
-// }
-// export default CounterPage
+  }
+  render(){
+    return (
+      <div>
+      <button onClick={this.handleIncrement}>+</button>
+      <input type="number"  />
+      <button onClick={this.handleDecrement}>-</button>
+      </div>
+      );
+  }
+}
+export default CounterPage
  
 
 
 
-import React, { Component} from 'react'
-import { observer, inject } from 'mobx-react'
-import { reaction } from 'mobx'
+// import React, { Component} from 'react'
+// import { observer, inject } from 'mobx-react'
+// import { reaction, observable } from 'mobx'
 
-import CounterStore from '../../stores/CounterStore'
-import stores from '../../stores'
-const counterStore = stores.counterStore
+// import CounterStore from '../../stores/CounterStore'
+// import stores from '../../stores'
+// const counterStore = stores.counterStore
 
-@observer
-class CounterPage extends Component {
-  handleIncrement = () => {
-    reaction (()=>{CounterStore.count},(count)=>{console.log("vamsi",count)})
-    counterStore.incrementCounter()
-  }
+// @observer
+// class CounterPage extends Component {
+//   @observable count:any = 0;
+//   handleIncrement = () => {
+//     reaction (()=>{CounterStore.count},(count)=>{console.log("vamsi",count)})
+//     counterStore.incrementCounter()
+//   }
 
-  handleDecrement = () => {
-    if (counterStore.count !== 0) {
-      counterStore.decrementCounter()
-      reaction (()=>{CounterStore.count},(count)=>{console.log("vamsi",count)})
-    }
-  }
+//   handleDecrement = () => {
+//     if (counterStore.count !== 0) {
+//       counterStore.decrementCounter()
+//       reaction (()=>{CounterStore.count},(count)=>{console.log("vamsi",count)})
+//     }
+//   }
 
-  render() {
-    return (
-      <div>
-        <h1>{counterStore.count}</h1>
-        <button onClick={this.handleIncrement}>+</button>
-        <button onClick={this.handleDecrement}>-</button>
-      </div>
-    )
-  }
-}
+//   render() {
+//     return (
+//       <div>
+//         <h1>{counterStore.count}</h1>
+//         <button onClick={this.handleIncrement}>+</button>
+//         <button onClick={this.handleDecrement}>-</button>
+//       </div>
+//     )
+//   }
+// }
 
-export default CounterPage
+// export default CounterPage

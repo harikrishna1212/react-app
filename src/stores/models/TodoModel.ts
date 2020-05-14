@@ -15,7 +15,7 @@ class TodoModel {
     this.isCompleted= !this.isCompleted;
         
     }
-    onUpdateTodoTitle(title){
+    onUpdateTodoTitle(title:any){
         this.title=title
     }
 

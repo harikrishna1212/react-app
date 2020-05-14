@@ -20,20 +20,20 @@
 // }
 // const counterStore=new CounterApp
 // export  default counterStore
-import { observable, action ,reaction} from 'mobx'
+import { observable,action} from 'mobx'
 
 class CounterStore {
    
-   @observable count = 0
+   @observable count:any = 0
 
    @action.bound
-   incrementCounter() {
+   incrementCounter():any {
       this.count = this.count + 1
 
    }
 
    @action.bound
-   decrementCounter() {
+   decrementCounter():any {
       this.count = this.count - 1
    }
 }

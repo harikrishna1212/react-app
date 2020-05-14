@@ -4,10 +4,7 @@ class TodoFilter extends React.Component{
         
     }
     render(){
-        return(
-            render(){
-        
-                return(
+        return( 
                 <div>
                 <button  value="All" onClick={this.onChangeSelectedFilter}>All</button>
                 <button value="Active" onClick={this.onChangeSelectedFilter}>Active</button>
@@ -17,8 +14,8 @@ class TodoFilter extends React.Component{
                 )
             }
 
-        );
+    
 
     }
-}
+
 export default TodoFilter

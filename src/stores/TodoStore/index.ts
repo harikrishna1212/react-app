@@ -7,7 +7,7 @@ class  TodoStore {
   @observable selectedFilter="ALL"; //ACTIVE COMPLETED
  
 @action.bound
- onAddTodo(title){ 
+ onAddTodo(title:any){ 
 
 const todoModel= new TodoModel()
 todoModel.onUpdateTodoTitle(title);
@@ -16,7 +16,7 @@ this.todos.push(todoModel)
 
  }
  @action.bound
- onRemoveTodo(todoId){
+ onRemoveTodo(todoId:any){
    const idToRemove=todoId
   const  newTodo= this.todos.filter((item) => item.id !== idToRemove);
   this.todos=newTodo;
@@ -24,7 +24,7 @@ this.todos.push(todoModel)
 
  }
  @action.bound
- onChangeSelectedFilter(filter){
+ onChangeSelectedFilter(filter:any){
    this.selectedFilter=filter
 
  }
