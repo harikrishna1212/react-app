@@ -1,44 +1,50 @@
 import React from 'react';
-import {observable,toJs} from "mobx";
+import {observable,toJs, action} from "mobx";
 import {observer} from "mobx-react";
+import allTodoStore from "../../stores/TodoStore/index.js"
 import './index.css';
-let todosOfUser = [];
+// let todosOfUser = [];
 @observer
 class Todos extends React.Component {
-    @observable todos=[];
+    /*@observable todos=[];
     @observable todosInList=false;
-    @observable clearCompletedButton=false;
+    @observable clearCompletedButton=false;*/
+
     completedTask = (idOfTodo) => {
+<<<<<<< HEAD
         
         // const duplicateArr = this.todos;
         todosOfUser[idOfTodo].isCompleted ? todosOfUser[idOfTodo].isCompleted = false : todosOfUser[idOfTodo].isCompleted = true;
         
+=======
+        allTodoStore.todosOfUser[idOfTodo].isCompleted ? allTodoStore.todosOfUser[idOfTodo].isCompleted = false : allTodoStore.todosOfUser[idOfTodo].isCompleted = true;
+>>>>>>> 8717a876ee812fcbfe5cdd09d04c20d935c29da1
        
-        this.todos=todosOfUser;
+        allTodoStore.todos=allTodoStore.todosOfUser;
 
-        if (todosOfUser.length === 0)
-            this.todosInList=false;
+        if (   allTodoStore.todosOfUser.length === 0)
+            allTodoStore.todosInList=false;
     }
     removeTask = (indexOfTodo) => {
-        todosOfUser.splice(indexOfTodo, 1);
+        allTodoStore.todosOfUser.splice(indexOfTodo, 1);
        
-       this.todos=todosOfUser;
+        allTodoStore.todos=   allTodoStore.todosOfUser;
 
-        if (todosOfUser.length === 0)
+        if (   allTodoStore.todosOfUser.length === 0)
             
-            this.todosInList=false
+        allTodoStore.todosInList=false
     }
 
     handleEnterKey = (event) => {
         if (event.key === 'Enter') {
             if (event.target.value !== "") {
                 const todoTask = {
-                    id: (this.todos).length + 1,
+                    id: (allTodoStore.todos).length + 1,
                     task: event.target.value,
                     isCompleted: false,
                 };
-                todosOfUser.push(todoTask);
-                this.todos= todosOfUser;
+                allTodoStore.todosOfUser.push(todoTask);
+                allTodoStore.todos=    allTodoStore.todosOfUser;
                 event.target.value = "";
                 this.todosInList=true;
             }
@@ -46,20 +52,24 @@ class Todos extends React.Component {
                 alert("Todos Should not be empty");
         }
     }
-    allTodos = () => {
-        this.todos=todosOfUser;
+    allTodos(){
+     allTodoStore.allTodos();
+     
     }
+    // allTodos = () => {
+    //     allTodoStore.todos=   allTodoStore.todosOfUser;
+    // }
 
     activeTodos = () => {
-        const activeTodosList = todosOfUser.filter((eachEl) => {
+        const activeTodosList =    allTodoStore.todosOfUser.filter((eachEl) => {
             return (eachEl.isCompleted !== true);
         });
-        this.todos = activeTodosList;
+        allTodoStore.todos = activeTodosList;
     }
 
     todosLeft = () => {
         let todosCount = 0;
-        todosOfUser.forEach((eachEl) => {
+        allTodoStore.todosOfUser.forEach((eachEl) => {
             if (eachEl.isCompleted !== true)
                 todosCount++;
         });
@@ -67,28 +77,28 @@ class Todos extends React.Component {
     }
 
     completedTodos = () => {
-        const completedTodosList = todosOfUser.filter((eachEl) => {
+        const completedTodosList =    allTodoStore.todosOfUser.filter((eachEl) => {
             return (eachEl.isCompleted !== false);
         });
-        this.todos=completedTodosList;
+        allTodoStore.todos=completedTodosList;
     }
     clearCompletedTodos = () => {
-        todosOfUser = todosOfUser.filter((eachEl) => {
+        allTodoStore.todosOfUser =    allTodoStore.todosOfUser.filter((eachEl) => {
             return (eachEl.isCompleted !== true);
         });
-        this.todos= todosOfUser;
+        allTodoStore.todos=    allTodoStore.todosOfUser;
 
-        if (todosOfUser.length === 0)
-            this.todosInList=false;
+        if (   allTodoStore.todosOfUser.length === 0)
+        allTodoStore.todosInList=false;
     }
 
     renderTodoList = () => {
-        const todoListItems = this.todos.map((eachEl) => {
-            let eachElIndex = (this.todos).indexOf(eachEl);
+        const todoListItems = allTodoStore.todos.map((eachEl) => {
+            let eachElIndex = (allTodoStore.todos).indexOf(eachEl);
             return (
                 <li key={(eachEl.id).toString()} className="items todo-li-items">
-              <i className= {this.todos[eachElIndex].isCompleted ? "fa fa-check-circle co":"fa fa-circle-thin co"} onClick={() => this.completedTask(eachElIndex)}></i>
-              <input type="text" className={this.todos[eachElIndex].isCompleted ? "text lineThrough":"text"} defaultValue = {eachEl.task}/>
+              <i className= {allTodoStore.todos[eachElIndex].isCompleted ? "fa fa-check-circle co":"fa fa-circle-thin co"} onClick={() => this.completedTask(eachElIndex)}></i>
+              <input type="text" className={allTodoStore.todos[eachElIndex].isCompleted ? "text lineThrough":"text"} defaultValue = {eachEl.task}/>
               <i className="fa fa-close de" onClick={() => this.removeTask(eachElIndex)}></i>
             </li>
             );
@@ -97,7 +107,9 @@ class Todos extends React.Component {
     }
     render() {
         // console.log(this.todos)
-        console.log(1)
+        // console.log(1)
+       // console.log(allTodoStore.todos);
+       console.log("coming to render")
         return (
             <div className = "todo-list-body-container">
             <div className = "main-todo-conatiner">

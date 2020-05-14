@@ -24,6 +24,8 @@ function App() {
         <Link to="/CountriesDashboardApp">CountriesAssignment</Link>
         <Link to="/counter-page">counter</Link>
         <Link to="/todo-app">TodoApp</Link>
+        <Link to="/mobx-todo-app">MobxTodo</Link>
+        <Link to="/Provide-app">Provide</Link>
       </header>
     </div>
   );
