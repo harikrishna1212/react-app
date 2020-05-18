@@ -1,7 +1,7 @@
 import React from "react";
 import {observer} from "mobx-react";
 import Todo from "./Todo"
-import {TodoStore} from "../../stores/TodoStore";
+import {TodoStore} from "../../stores/TodoStoreOld";
 
 // type TodoListProps={
 //     todoStore:TodoStore

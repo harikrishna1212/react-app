@@ -22,10 +22,14 @@ function App() {
         <Link to="/todolist">Todolist</Link>
         <Link to="/emoji-game">EmojiGame</Link>
         <Link to="/CountriesDashboardApp">CountriesAssignment</Link>
-        <Link to="/counter-page">counter</Link>
         <Link to="/todo-app">TodoApp</Link>
         <Link to="/mobx-todo-app">MobxTodo</Link>
         <Link to="/Provide-app">Provide</Link>
+        <Link to="/Todo-App">NetworkCall Todo</Link>
+        <Link to="/user-page">loading tryout</Link>
+        <Link to="/ecommerce-store/sign-in/">signin</Link>
+        <Link to="/login-form">login</Link>
+        <Link to="/practice-example">PracticeExample</Link>
       </header>
     </div>
   );
