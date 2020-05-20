@@ -23,7 +23,8 @@ import commonStore from "./common/stores/index";
 import {routes} from "./Authentication/routes/SignInRoute/index";
 import ProductsPage from "./ProductPage/components/ProductsPage/index";
 
-import PracticeExample from './components/Practice/index'
+import PracticeExample from './components/Practice/index';
+import PracticeAdvancedConceptsRoute from '../src/common/routes/PracticeAdvancedConceptsRoute '
 import "./App.css";
 
 
@@ -89,6 +90,9 @@ class App extends React.Component {
         <Route exact path="/login-form" component={LoginForm}>
         </Route>
         <Route exact path="/practice-example" component={PracticeExample}>
+        </Route>
+        <Route exact path="/practice-advanced-concepts">
+          <PracticeAdvancedConceptsRoute/>
         </Route>
         <Route path="/">
           <HomePage />

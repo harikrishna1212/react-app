@@ -30,6 +30,7 @@ function App() {
         <Link to="/ecommerce-store/sign-in/">signin</Link>
         <Link to="/login-form">login</Link>
         <Link to="/practice-example">PracticeExample</Link>
+        <Link to="/practice-advanced-concepts">ReactAdvancedConcepts</Link>
       </header>
     </div>
   );
