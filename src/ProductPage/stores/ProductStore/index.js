@@ -3,24 +3,25 @@ import {API_INITIAL} from "@ib/api-constants";
 import {bindPromiseWithOnSuccess} from '@ib/mobx-promise';
 import ProductModel from '../model/Product/index'
 
-
-
 class ProductStore {
     @observable productList=[];
     @observable getProductListAPIStatus = API_INITIAL;
     @observable getProductListAPIError = null
     @observable productsAPIService;
+
     @observable sizeFilter=[];
     @observable sortBy = "SELECT"; // ASCENDING //DESCENDING;
      
     
     constructor(productsAPIService){
+        //console.log("hari",productsAPIService)
         this.productsAPIService = productsAPIService;
 
     }
     @action.bound
     getProductList(){
         const productPromise = this.productsAPIService.getProductsAPI();
+        console.log("productPromise",productPromise)
 
         return bindPromiseWithOnSuccess(productPromise)
         .to(this.setGetProductListAPIStatus,this.setProductListResponse)
@@ -29,7 +30,9 @@ class ProductStore {
     }
     @action.bound
     setProductListResponse(productResponse){
-        productResponse.forEach((eachProduct)=>{
+        console.log("ProductResponse",productResponse)
+        productResponse.products.forEach((eachProduct)=>{
+            
             const productModel = new ProductModel(eachProduct);
             this.productList.push(productModel)
             

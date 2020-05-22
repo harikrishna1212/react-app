@@ -1,11 +1,12 @@
 import React from "react";
+import InputElement from "../../../common/components/CommonInputElement/InputElement"
 
 import {SignInMainDiv,Username,Password,SignInButton,SignInHeading,TotalDiv,ErrorMessage} from '../SignInPage/styledComponents'
 
 class SignInPage extends React.Component{
   userNameRef = React.createRef();
   componentDidMount(){
-    this.userNameRef.current.focus();
+    //this.userNameRef.current.focus();
   }
 
     render(){
@@ -15,8 +16,12 @@ class SignInPage extends React.Component{
             <TotalDiv>
             <SignInMainDiv>
                 <SignInHeading>Sign in</SignInHeading>
-                <Username ref = {this.userNameRef} type ="text" placeholder="Username" value={username} onChange={onChangeUsername}/>
-                <Password type="password"  placeholder="Password" value={password} onChange={onChangePassword}/>
+                {/* <Username ref = {this.userNameRef} type ="text" placeholder="Username" value={username} onChange={onChangeUsername}/> */}
+                <InputElement type="text" placeholder = "Username" value = {username}
+                 onChange = {onChangeUsername}/>
+                <InputElement type="password"  placeholder = "Password" value={password} 
+                onChange = {onChangePassword}/>
+                {/* <Password type="password"  placeholder="Password" value={password} onChange={onChangePassword}/> */}
                 <SignInButton onClick={onClickSignIn}>{getUserSignInAPIStatus===100 ? `Signing In` : `Sign In`}</SignInButton>
                 {errorMessage !== "" && errorMessage !== undefined ? (
             <ErrorMessage>
