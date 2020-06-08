@@ -8,7 +8,7 @@ class CollapseExpand extends React.Component{
         const {onToggle} = this.props;
         onToggle()
     }
-   
+
     render(){
         const {toggleStatus} = this.props;
       

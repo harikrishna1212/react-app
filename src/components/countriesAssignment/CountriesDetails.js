@@ -14,7 +14,7 @@ class CountriesDetails extends React.Component {
             countryDetails: [],
             duplistOfJson: ""
         }
-        console.log("In CountriesDetails constructor")
+      
     }
     componentDidMount = () => {
         this.getCountryDetails()

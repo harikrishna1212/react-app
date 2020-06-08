@@ -25,6 +25,7 @@ import ProductsPage from "./ProductPage/components/ProductsPage/index";
 
 import PracticeExample from './components/Practice/index';
 import PracticeAdvancedConceptsRoute from '../src/common/routes/PracticeAdvancedConceptsRoute '
+import ReactPractice from "../src/components/ReactPractice/index"
 import "./App.css";
 
 
@@ -94,6 +95,10 @@ class App extends React.Component {
         <Route exact path="/practice-advanced-concepts">
           <PracticeAdvancedConceptsRoute/>
         </Route>
+        <Route exact path="/react-concepts">
+          <ReactPractice/>
+        </Route>
+       
         <Route path="/">
           <HomePage />
         </Route>        

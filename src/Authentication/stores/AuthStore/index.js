@@ -8,10 +8,9 @@ class AuthStore {
 
 @observable getUserSignInAPIStatus = API_INITIAL;
 @observable getUserSignInAPIError = null;
-
 @observable authAPIService = '';
 
-constructor(authAPIService){
+constructor(authAPIService){  
     
 this.authAPIService = authAPIService;
 
@@ -19,7 +18,6 @@ this.authAPIService = authAPIService;
 
 @action.bound
 userSignIn(){
-   
     
     const authPromise = this.authAPIService.signInAPI();
    

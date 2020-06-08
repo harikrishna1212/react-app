@@ -1,6 +1,7 @@
-const endpoints =  {
-    //Productlist : 'v1/products/'
-    Productlist : 'products?limit=4&offset=1'
-
+const endpoints = (limit,offset)=>{  
+    
+return `products?limit=${limit}&offset=${offset}`
 }
+
+
 export default endpoints

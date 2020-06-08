@@ -3,7 +3,8 @@ import { inject,observer } from "mobx-react";
 import SizeFilter from "../SizeFilter";
 import ProductList from "../ProductList/index";
 import Header from '../Header/index';
-import ProductCart from "../../../Cart/components/ProductCart/index"
+import ProductCart from "../../../Cart/components/ProductCart/index";
+import Pagination from "../Pagination/index"
 import {ProductPageMainDiv,SignOutButton,SizeFilterAndProductsDiv,HeaderAndProducts,SignOutButtonAndProductCart} from "../ProductsPage/styledComponents";
 
 @inject('authStore','productStore','cartStore')
@@ -48,7 +49,9 @@ class ProductsPage extends React.Component{
             <Header productCount = {totalNoOfProductsDisplayed} onSelectSortBy={onChangeSortBy}/>
             <ProductList products={sortedAndFilteredProducts} onClickAddToCart={cartStore.onClickAddToCart}/>
             </HeaderAndProducts>
+            <Pagination/>
             </SizeFilterAndProductsDiv>
+            
             
             
             

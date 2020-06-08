@@ -31,6 +31,7 @@ function App() {
         <Link to="/login-form">login</Link>
         <Link to="/practice-example">PracticeExample</Link>
         <Link to="/practice-advanced-concepts">ReactAdvancedConcepts</Link>
+        <Link to="/react-concepts">ReactPractice</Link>
       </header>
     </div>
   );
