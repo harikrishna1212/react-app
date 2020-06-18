@@ -25,7 +25,8 @@ import ProductsPage from "./ProductPage/components/ProductsPage/index";
 
 import PracticeExample from './components/Practice/index';
 import PracticeAdvancedConceptsRoute from '../src/common/routes/PracticeAdvancedConceptsRoute '
-import ReactPractice from "../src/components/ReactPractice/index"
+import ReactPractice from "../src/components/ReactPractice/index";
+import HariComponent from "../src/components/ReactPractice/hariComponent"
 import "./App.css";
 
 
@@ -88,7 +89,7 @@ class App extends React.Component {
         {routes}
         <Route exact path="/products-page" component={ProductsPage}>
         </Route>
-        <Route exact path="/login-form" component={LoginForm}>
+        <Route exact path="/login-form" component={HariComponent}>
         </Route>
         <Route exact path="/practice-example" component={PracticeExample}>
         </Route>

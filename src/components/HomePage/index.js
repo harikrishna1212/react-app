@@ -28,7 +28,7 @@ function App() {
         <Link to="/Todo-App">NetworkCall Todo</Link>
         <Link to="/user-page">loading tryout</Link>
         <Link to="/ecommerce-store/sign-in/">signin</Link>
-        <Link to="/login-form">login</Link>
+        <Link to="/login-form">LearningHocComponent</Link>
         <Link to="/practice-example">PracticeExample</Link>
         <Link to="/practice-advanced-concepts">ReactAdvancedConcepts</Link>
         <Link to="/react-concepts">ReactPractice</Link>
