@@ -18,8 +18,6 @@ class UserPage extends Component {
     }
 
     renderUserList = () => {
-        
-
         const { users } = this.props.userStore;
         if (users.length === 0) {
             return <NoDataView/>;
@@ -32,7 +30,6 @@ class UserPage extends Component {
         const { getUsersApiStatus, getUsersApiError } = this.props.userStore;
 
         return (
-
             <LoadingWrapperWithFailure
                 apiError={getUsersApiError}
                 apiStatus={getUsersApiStatus}

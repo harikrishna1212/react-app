@@ -6,7 +6,7 @@ class LoadingPracticeStore {
    @observable getAdminAPIError = null
    @observable getUserAPIStatus = API_INITIAL
    @observable getUserAPIError = null
-   @observable adminDetails =[]
+   @observable adminDetails = []
    @observable userDetails = []
 
    loadingApiService
@@ -21,6 +21,21 @@ class LoadingPracticeStore {
          .to(this.setAdminStatus, this.setAdminResponse)
          .catch(this.setAdminAPIError)
    }
+
+   @action.bound
+   setAdminStatus(apiResponse) {
+      this.getAdminAPIStatus = apiResponse
+   }
+   @action.bound
+   setAdminResponse(data) {
+      
+      this.adminDetails.push(data)
+     
+   }
+   @action.bound
+   setAdminAPIError(apiError) {
+      this.getAdminAPIError = apiError
+   }
    @action.bound
    getUserDetailsApi() {
       const userPromise = this.loadingApiService.getUserDetails()
@@ -29,28 +44,17 @@ class LoadingPracticeStore {
          .catch(this.setUserAPIError)
    }
    @action.bound
-   setAdminStatus(apiResponse) {
-      this.getAdminAPIStatus = apiResponse
-   }
-   @action.bound
-   setAdminResponse(data) {
-       this.adminDetails.push(data)
-   }
-   @action.bound
-   setAdminAPIError(apiError) {
-      this.getAdminAPIError = apiError
-   }
-   @action.bound
    setUserStatus(apiResponse) {
-       this.getUserAPIStatus = apiResponse;
+
+      this.getUserAPIStatus = apiResponse
    }
    @action.bound
    setUserResponse(data) {
-       this.userDetails.push(data)
+      this.userDetails.push(data)
    }
    @action.bound
    setUserAPIError(apiError) {
-       this.getUserAPIError = apiError
+      this.getUserAPIError = apiError
    }
 }
 export default LoadingPracticeStore

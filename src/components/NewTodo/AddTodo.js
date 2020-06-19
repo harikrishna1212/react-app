@@ -12,7 +12,7 @@ class AddTodo extends React.Component{
 
     }
     @action.bound
-    onChangeInput(){
+    onChangeInput(event){
         if(event.key==="Enter"){
         this.todoTitle=event.target.value;
         event.target.value="";

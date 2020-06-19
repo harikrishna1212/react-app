@@ -6,8 +6,7 @@ class MouseCoordinates  extends React.Component{
 @observable  x= 0;
 @observable y=0;
 handleMouseMove=(event)=>{
-    
-    this.x = event.clientX,
+    this.x = event.clientX
     this.y=  event.clientY
 }
 render(){

@@ -8,15 +8,25 @@ class LoadingServiceFixture {
 
    }
    getAdminDeatils = () => {
-       return promise = new Promise(function(resolve){
-           resolve(getAdminResponse)
+      
+        const promise = new Promise(function(resolve,reject){
+            setTimeout( function(){
+                resolve(getAdminResponse)
+            },1000)
+            
+          
 
        })
+       return promise
    }
    getUserDetails = () => {
-       return promise = new Promise(function(resolve){
-           resolve(getUserResponse)
+     
+        const promise = new Promise(function(resolve,reject){
+           setTimeout(function (){
+               resolve(getUserResponse)
+        },2000)
        })
+       return promise
    }
 }
 export default LoadingServiceFixture

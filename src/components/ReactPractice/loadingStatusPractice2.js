@@ -1,13 +1,12 @@
 import React from 'react'
-import LoadingComponentTwo from '../LoadingStatusTwo/index'
+import LoadingComponentTwo from '../LoadingStatusTwo/index';
+import LoadingWrapperWithFailure from '../common/LoadingWrapperWithFailure/index';
 class LoadingStatusRouteTwo extends React.Component {
    render() {
-      const { userDetails, getAdminAPIStatus, getUserAPIStatus } = this.props
+      const { userDetails} = this.props
       return (
          <LoadingComponentTwo
             userDetails={userDetails}
-            getAdminAPIStatus={getAdminAPIStatus}
-            getUserAPIStatus={getUserAPIStatus}
          />
       )
    }
